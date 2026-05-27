@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tecnologia e Futuro</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background: #0f172a;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header{
+      background: linear-gradient(90deg, #2563eb, #7c3aed);
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    header h1{
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    nav{
+      background: #111827;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul{
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      list-style: none;
+    }
+
+    nav a{
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover{
+      color: #60a5fa;
+    }
+
+    section{
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card{
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .card img{
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    h2{
+      color: #60a5fa;
+      margin-bottom: 15px;
+    }
+
+    footer{
+      background: #111827;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 2px solid #2563eb;
+    }
+
+    footer p{
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 768px){
+      header h1{
+        font-size: 2rem;
+      }
+
+      nav ul{
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>O Futuro da Tecnologia</h1>
+    <p>Explorando inovação, inteligência artificial e o mundo digital.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#ia">Inteligência Artificial</a></li>
+      <li><a href="#robotica">Robótica</a></li>
+      <li><a href="#futuro">O Futuro</a></li>
+    </ul>
+  </nav>
+
+  <section id="ia">
+    <div class="card">
+      <h2>Inteligência Artificial</h2>
+      <p>
+        A inteligência artificial está revolucionando o mundo moderno.
+        Hoje, sistemas inteligentes conseguem aprender, criar conteúdos,
+        analisar dados e automatizar tarefas complexas.
+      </p>
+
+      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop" alt="Inteligência Artificial">
+    </div>
+  </section>
+
+  <section id="robotica">
+    <div class="card">
+      <h2>Robótica Avançada</h2>
+      <p>
+        Robôs modernos já são utilizados em fábricas, hospitais e até em missões espaciais.
+        No futuro, a integração entre humanos e máquinas será ainda maior.
+      </p>
+
+      <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop" alt="Robótica">
+    </div>
+  </section>
+
+  <section id="futuro">
+    <div class="card">
+      <h2>Como Será o Futuro?</h2>
+      <p>
+        O futuro promete cidades inteligentes, carros autônomos,
+        realidade aumentada e avanços impressionantes na computação quântica.
+        A tecnologia continuará transformando a forma como vivemos.
+      </p>
+
+      <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop" alt="Futuro tecnológico">
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 - Página sobre Tecnologia e Futuro | Desenvolvido em HTML e CSS</p>
+  </footer>
+
+</body>
+</html>

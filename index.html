@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tecnologia e Futuro</title>
 
   <style>
     *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
+      scroll-behavior: smooth;
     }
 
     body{
-      background: #0f172a;
+      background: #0b1120;
       color: white;
       line-height: 1.6;
     }
 
+    /* HEADER */
     header{
       background: linear-gradient(90deg, #2563eb, #7c3aed);
-      padding: 25px;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      padding: 40px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     }
 
     header h1{
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin-bottom: 10px;
     }
 
+    header p{
+      font-size: 1.2rem;
+      color: #e2e8f0;
+    }
+
+    /* MENU */
     nav{
       background: #111827;
       padding: 15px;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
 
     nav ul{
@@ -44,6 +52,7 @@
       justify-content: center;
       gap: 30px;
       list-style: none;
+      flex-wrap: wrap;
     }
 
     nav a{
@@ -57,45 +66,154 @@
       color: #60a5fa;
     }
 
+    /* HERO */
+    .hero{
+      height: 500px;
+      background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&auto=format&fit=crop') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-content{
+      background: rgba(0,0,0,0.6);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 700px;
+    }
+
+    .hero h2{
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #60a5fa;
+    }
+
+    .hero button{
+      margin-top: 20px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      background: #2563eb;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover{
+      background: #1d4ed8;
+      transform: scale(1.05);
+    }
+
+    /* SEÇÕES */
     section{
-      padding: 50px 20px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
+      padding: 60px 20px;
+    }
+
+    .section-title{
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #60a5fa;
+    }
+
+    .cards{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
     }
 
     .card{
       background: #1e293b;
-      padding: 25px;
       border-radius: 15px;
-      margin-bottom: 30px;
+      overflow: hidden;
+      transition: 0.3s;
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .card:hover{
+      transform: translateY(-10px);
     }
 
     .card img{
       width: 100%;
-      border-radius: 10px;
-      margin-top: 15px;
+      height: 220px;
+      object-fit: cover;
     }
 
-    h2{
-      color: #60a5fa;
+    .card-content{
+      padding: 20px;
+    }
+
+    .card h3{
+      color: #93c5fd;
       margin-bottom: 15px;
     }
 
+    /* TABELA */
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    table th,
+    table td{
+      border: 1px solid #334155;
+      padding: 15px;
+      text-align: center;
+    }
+
+    table th{
+      background: #2563eb;
+    }
+
+    table tr:nth-child(even){
+      background: #1e293b;
+    }
+
+    /* GALERIA */
+    .gallery{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img{
+      width: 100%;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover{
+      transform: scale(1.05);
+    }
+
+    /* RODAPÉ */
     footer{
       background: #111827;
       text-align: center;
-      padding: 20px;
+      padding: 30px;
       margin-top: 40px;
-      border-top: 2px solid #2563eb;
+      border-top: 3px solid #2563eb;
     }
 
     footer p{
       color: #cbd5e1;
     }
 
-    @media (max-width: 768px){
+    /* RESPONSIVO */
+    @media(max-width:768px){
+
       header h1{
+        font-size: 2.2rem;
+      }
+
+      .hero h2{
         font-size: 2rem;
       }
 
@@ -103,65 +221,204 @@
         flex-direction: column;
         align-items: center;
       }
+
     }
   </style>
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <header>
-    <h1>O Futuro da Tecnologia</h1>
-    <p>Explorando inovação, inteligência artificial e o mundo digital.</p>
+    <h1>TECNOLOGIA & FUTURO</h1>
+    <p>Conheça as inovações que estão mudando o mundo.</p>
   </header>
 
+  <!-- MENU -->
   <nav>
     <ul>
-      <li><a href="#ia">Inteligência Artificial</a></li>
+      <li><a href="#ia">IA</a></li>
       <li><a href="#robotica">Robótica</a></li>
-      <li><a href="#futuro">O Futuro</a></li>
+      <li><a href="#espaco">Espaço</a></li>
+      <li><a href="#energia">Energia</a></li>
+      <li><a href="#galeria">Galeria</a></li>
     </ul>
   </nav>
 
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <h2>O Futuro Já Começou</h2>
+      <p>
+        Inteligência artificial, realidade virtual, robôs inteligentes
+        e exploração espacial estão transformando a humanidade.
+      </p>
+
+      <button>Explorar Agora</button>
+    </div>
+  </div>
+
+  <!-- IA -->
   <section id="ia">
-    <div class="card">
-      <h2>Inteligência Artificial</h2>
-      <p>
-        A inteligência artificial está revolucionando o mundo moderno.
-        Hoje, sistemas inteligentes conseguem aprender, criar conteúdos,
-        analisar dados e automatizar tarefas complexas.
-      </p>
+    <h2 class="section-title">Inteligência Artificial</h2>
 
-      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop" alt="Inteligência Artificial">
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Machine Learning</h3>
+          <p>
+            Sistemas inteligentes conseguem aprender padrões e melhorar automaticamente.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Automação</h3>
+          <p>
+            Empresas usam IA para automatizar tarefas e aumentar produtividade.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Robôs Inteligentes</h3>
+          <p>
+            Robôs modernos conseguem interagir e auxiliar seres humanos.
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- ROBÓTICA -->
   <section id="robotica">
-    <div class="card">
-      <h2>Robótica Avançada</h2>
-      <p>
-        Robôs modernos já são utilizados em fábricas, hospitais e até em missões espaciais.
-        No futuro, a integração entre humanos e máquinas será ainda maior.
-      </p>
+    <h2 class="section-title">Robótica Moderna</h2>
 
-      <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop" alt="Robótica">
+    <p>
+      A robótica está presente em fábricas, hospitais e até em casas inteligentes.
+      No futuro, robôs poderão realizar cirurgias complexas e explorar outros planetas.
+    </p>
+
+    <table>
+      <tr>
+        <th>Tecnologia</th>
+        <th>Uso Atual</th>
+        <th>Futuro</th>
+      </tr>
+
+      <tr>
+        <td>IA</td>
+        <td>Assistentes Virtuais</td>
+        <td>Consciência Artificial</td>
+      </tr>
+
+      <tr>
+        <td>Robótica</td>
+        <td>Indústrias</td>
+        <td>Robôs Humanos</td>
+      </tr>
+
+      <tr>
+        <td>VR/AR</td>
+        <td>Jogos</td>
+        <td>Metaverso Completo</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- ESPAÇO -->
+  <section id="espaco">
+    <h2 class="section-title">Exploração Espacial</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Viagens Espaciais</h3>
+          <p>
+            Empresas privadas estão tornando viagens ao espaço mais acessíveis.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Colonização de Marte</h3>
+          <p>
+            Cientistas estudam formas de criar vida sustentável em Marte.
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section id="futuro">
-    <div class="card">
-      <h2>Como Será o Futuro?</h2>
-      <p>
-        O futuro promete cidades inteligentes, carros autônomos,
-        realidade aumentada e avanços impressionantes na computação quântica.
-        A tecnologia continuará transformando a forma como vivemos.
-      </p>
+  <!-- ENERGIA -->
+  <section id="energia">
+    <h2 class="section-title">Energia do Futuro</h2>
 
-      <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop" alt="Futuro tecnológico">
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Energia Solar</h3>
+          <p>
+            Fontes renováveis serão essenciais para um planeta sustentável.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Cidades Inteligentes</h3>
+          <p>
+            Tecnologia e sustentabilidade irão transformar grandes cidades.
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- GALERIA -->
+  <section id="galeria">
+    <h2 class="section-title">Galeria Tecnológica</h2>
+
+    <div class="gallery">
+
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
   <footer>
-    <p>© 2026 - Página sobre Tecnologia e Futuro | Desenvolvido em HTML e CSS</p>
+    <p>© 2026 - Página Tecnologia & Futuro</p>
+    <p>Desenvolvido com HTML e CSS</p>
   </footer>
 
 </body>

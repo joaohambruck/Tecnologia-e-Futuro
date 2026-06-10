@@ -1,642 +1,155 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tecnologia & Futuro</title>
+<section id="curiosidades">
 
-  <style>
+  <h2 class="section-title">Curiosidades Tecnológicas</h2>
 
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-      scroll-behavior: smooth;
-    }
+  <div class="cards">
 
-    body{
-      background: #0b1120;
-      color: white;
-      line-height: 1.6;
-    }
+    <div class="card">
+      <div class="card-content">
+        <h3>Primeiro Computador</h3>
+        <p>O ENIAC ocupava uma sala inteira e pesava mais de 27 toneladas.</p>
+      </div>
+    </div>
 
-    header{
-      background: linear-gradient(90deg, #2563eb, #7c3aed);
-      text-align: center;
-      padding: 40px 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    }
+    <div class="card">
+      <div class="card-content">
+        <h3>Internet</h3>
+        <p>Mais de 60% da população mundial possui acesso à internet.</p>
+      </div>
+    </div>
 
-    header h1{
-      font-size: 3.5rem;
-      margin-bottom: 10px;
-    }
-
-    header p{
-      font-size: 1.2rem;
-      color: #e2e8f0;
-    }
-
-    nav{
-      background: #111827;
-      padding: 15px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav ul{
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      list-style: none;
-      flex-wrap: wrap;
-    }
-
-    nav a{
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover{
-      color: #60a5fa;
-    }
-
-    .hero{
-      height: 500px;
-      background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&auto=format&fit=crop') center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .hero-content{
-      background: rgba(0,0,0,0.6);
-      padding: 40px;
-      border-radius: 20px;
-      max-width: 700px;
-    }
-
-    .hero h2{
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #60a5fa;
-    }
-
-    .hero button{
-      margin-top: 20px;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 10px;
-      background: #2563eb;
-      color: white;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .hero button:hover{
-      background: #1d4ed8;
-      transform: scale(1.05);
-    }
-
-    section{
-      max-width: 1100px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    .section-title{
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-      color: #60a5fa;
-    }
-
-    .cards{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-    }
-
-    .card{
-      background: #1e293b;
-      border-radius: 15px;
-      overflow: hidden;
-      transition: 0.3s;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    }
-
-    .card:hover{
-      transform: translateY(-10px);
-    }
-
-    .card img{
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    .card-content{
-      padding: 20px;
-    }
-
-    .card h3{
-      color: #93c5fd;
-      margin-bottom: 15px;
-    }
-
-    table{
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 30px;
-    }
-
-    table th,
-    table td{
-      border: 1px solid #334155;
-      padding: 15px;
-      text-align: center;
-    }
-
-    table th{
-      background: #2563eb;
-    }
-
-    table tr:nth-child(even){
-      background: #1e293b;
-    }
-
-    .gallery{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery img{
-      width: 100%;
-      border-radius: 15px;
-      transition: 0.3s;
-    }
-
-    .gallery img:hover{
-      transform: scale(1.05);
-    }
-
-    footer{
-      background: #111827;
-      text-align: center;
-      padding: 40px 20px;
-      margin-top: 40px;
-      border-top: 3px solid #2563eb;
-    }
-
-    footer h2{
-      color: #60a5fa;
-      margin-bottom: 15px;
-    }
-
-    footer p{
-      color: #cbd5e1;
-      margin: 5px 0;
-    }
-
-    .social{
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .social a{
-      color: white;
-      text-decoration: none;
-      background: #2563eb;
-      padding: 10px 18px;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
-
-    .social a:hover{
-      background: #1d4ed8;
-      transform: scale(1.05);
-    }
-
-    .copy{
-      margin-top: 20px;
-      font-size: 0.9rem;
-      color: #94a3b8;
-    }
-
-    @media(max-width:768px){
-
-      header h1{
-        font-size: 2.2rem;
-      }
-
-      .hero h2{
-        font-size: 2rem;
-      }
-
-      nav ul{
-        flex-direction: column;
-        align-items: center;
-      }
-
-    }
-
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <h1>TECNOLOGIA & FUTURO</h1>
-    <p>Conheça as inovações que estão mudando o mundo.</p>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="#ia">IA</a></li>
-      <li><a href="#robotica">Robótica</a></li>
-      <li><a href="#espaco">Espaço</a></li>
-      <li><a href="#energia">Energia</a></li>
-      <li><a href="#galeria">Galeria</a></li>
-    </ul>
-  </nav>
-
-  <div class="hero">
-
-    <div class="hero-content">
-      <h2>O Futuro Já Começou</h2>
-
-      <p>
-        Inteligência artificial, robôs inteligentes e exploração espacial
-        estão transformando a humanidade.
-      </p>
-
-      <button>Explorar Agora</button>
+    <div class="card">
+      <div class="card-content">
+        <h3>IA Moderna</h3>
+        <p>Modelos de IA já conseguem gerar textos, imagens, vídeos e códigos.</p>
+      </div>
     </div>
 
   </div>
 
-  <section id="ia">
+</section>
 
-    <h2 class="section-title">Inteligência Artificial</h2>
+<section id="timeline">
 
-    <div class="cards">
+  <h2 class="section-title">Linha do Tempo da Tecnologia</h2>
 
-      <div class="card">
+  <table>
+    <tr>
+      <th>Ano</th>
+      <th>Marco Tecnológico</th>
+    </tr>
 
-        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop">
+    <tr>
+      <td>1946</td>
+      <td>Criação do ENIAC</td>
+    </tr>
 
-        <div class="card-content">
-          <h3>Machine Learning</h3>
+    <tr>
+      <td>1969</td>
+      <td>Primeira conexão da ARPANET</td>
+    </tr>
 
-          <p>
-            Sistemas inteligentes conseguem aprender padrões automaticamente.
-          </p>
-        </div>
+    <tr>
+      <td>1991</td>
+      <td>Criação da World Wide Web</td>
+    </tr>
 
+    <tr>
+      <td>2007</td>
+      <td>Popularização dos Smartphones</td>
+    </tr>
+
+    <tr>
+      <td>2026</td>
+      <td>Expansão da Inteligência Artificial</td>
+    </tr>
+
+  </table>
+
+</section>
+
+<section id="estatisticas">
+
+  <h2 class="section-title">Números da Tecnologia</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-content">
+        <h3>5 Bilhões</h3>
+        <p>Usuários de internet no mundo.</p>
       </div>
-
-      <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="card-content">
-          <h3>Automação</h3>
-
-          <p>
-            Empresas usam IA para automatizar tarefas e aumentar produtividade.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="card-content">
-          <h3>Robôs Inteligentes</h3>
-
-          <p>
-            Robôs modernos conseguem interagir e auxiliar seres humanos.
-          </p>
-        </div>
-
-      </div>
-
     </div>
 
-  </section>
-
-  <section id="robotica">
-
-    <h2 class="section-title">Robótica Moderna</h2>
-
-    <p>
-      A robótica está presente em fábricas, hospitais e até em casas inteligentes.
-    </p>
-
-    <table>
-
-      <tr>
-        <th>Tecnologia</th>
-        <th>Uso Atual</th>
-        <th>Futuro</th>
-      </tr>
-
-      <tr>
-        <td>IA</td>
-        <td>Assistentes Virtuais</td>
-        <td>Consciência Artificial</td>
-      </tr>
-
-      <tr>
-        <td>Robótica</td>
-        <td>Indústrias</td>
-        <td>Robôs Humanos</td>
-      </tr>
-
-      <tr>
-        <td>VR/AR</td>
-        <td>Jogos</td>
-        <td>Metaverso Completo</td>
-      </tr>
-
-    </table>
-
-  </section>
-
-  <section id="espaco">
-
-    <h2 class="section-title">Exploração Espacial</h2>
-
-    <div class="cards">
-
-      <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="card-content">
-          <h3>Viagens Espaciais</h3>
-
-          <p>
-            Empresas privadas estão tornando viagens ao espaço mais acessíveis.
-          </p>
-        </div>
-
+    <div class="card">
+      <div class="card-content">
+        <h3>30 Bilhões</h3>
+        <p>Dispositivos conectados previstos para os próximos anos.</p>
       </div>
-
-      <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="card-content">
-          <h3>Colonização de Marte</h3>
-
-          <p>
-            Cientistas estudam formas de criar vida sustentável em Marte.
-          </p>
-        </div>
-
-      </div>
-
     </div>
 
-  </section>
-
-  <section id="energia">
-
-    <h2 class="section-title">Energia do Futuro</h2>
-
-    <div class="cards">
-
-      <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="card-content">
-          <h3>Energia Solar</h3>
-
-          <p>
-            Fontes renováveis serão essenciais para um planeta sustentável.
-          </p>
-        </div>
-
+    <div class="card">
+      <div class="card-content">
+        <h3>80%</h3>
+        <p>Empresas investindo em transformação digital.</p>
       </div>
-
-      <div class="card">
-
-        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="card-content">
-          <h3>Cidades Inteligentes</h3>
-
-          <p>
-            Tecnologia e sustentabilidade irão transformar grandes cidades.
-          </p>
-        </div>
-
-      </div>
-
     </div>
 
-  </section>
+  </div>
 
-  <section id="galeria">
+</section>
 
-    <h2 class="section-title">Galeria Tecnológica</h2>
+<section id="faq">
 
-    <div class="gallery">
+  <h2 class="section-title">Perguntas Frequentes</h2>
 
-      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+  <div class="cards">
 
-      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
-
-      <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?q=80&w=1200&auto=format&fit=crop">
-
-      <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop">
-
+    <div class="card">
+      <div class="card-content">
+        <h3>O que é Inteligência Artificial?</h3>
+        <p>É uma tecnologia capaz de simular processos de aprendizagem e tomada de decisão.</p>
+      </div>
     </div>
 
-  </section>
-
-  <section>
-
-    <h2 class="section-title">Avanços Tecnológicos</h2>
-
-    <div class="cards">
-
-      <div class="card">
-
-        <div class="card-content">
-
-          <h3>5G</h3>
-
-          <p>
-            A tecnologia 5G permitirá conexões muito mais rápidas e estáveis.
-          </p>
-
-        </div>
-
+    <div class="card">
+      <div class="card-content">
+        <h3>O que é Computação Quântica?</h3>
+        <p>É uma nova forma de processamento que utiliza princípios da física quântica.</p>
       </div>
-
-      <div class="card">
-
-        <div class="card-content">
-
-          <h3>Computação Quântica</h3>
-
-          <p>
-            Computadores quânticos poderão resolver cálculos extremamente complexos.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <div class="card-content">
-
-          <h3>Biotecnologia</h3>
-
-          <p>
-            Novas tecnologias ajudarão no desenvolvimento da medicina moderna.
-          </p>
-
-        </div>
-
-      </div>
-
     </div>
 
-  </section>
-
-  <section>
-
-    <h2 class="section-title">Impactos da Tecnologia</h2>
-
-    <div class="cards">
-
-      <div class="card">
-
-        <div class="card-content">
-
-          <h3>Educação</h3>
-
-          <p>
-            Plataformas digitais tornam o aprendizado mais acessível e interativo.
-          </p>
-
-        </div>
-
+    <div class="card">
+      <div class="card-content">
+        <h3>Como será o futuro?</h3>
+        <p>Com mais automação, conectividade, energias renováveis e inteligência artificial.</p>
       </div>
-
-      <div class="card">
-
-        <div class="card-content">
-
-          <h3>Saúde</h3>
-
-          <p>
-            Tecnologias modernas ajudam médicos em diagnósticos e tratamentos.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <div class="card-content">
-
-          <h3>Comunicação</h3>
-
-          <p>
-            Redes sociais e aplicativos conectam pessoas em tempo real no mundo inteiro.
-          </p>
-
-        </div>
-
-      </div>
-
     </div>
 
-  </section>
+  </div>
 
-  <section>
+</section>
 
-    <h2 class="section-title">Benefícios da Tecnologia</h2>
+<section id="contato">
 
-    <table>
+  <h2 class="section-title">Entre em Contato</h2>
 
-      <tr>
-        <th>Área</th>
-        <th>Benefício</th>
-      </tr>
+  <form>
 
-      <tr>
-        <td>Educação</td>
-        <td>Aulas online e pesquisas rápidas</td>
-      </tr>
+    <input type="text" placeholder="Nome">
 
-      <tr>
-        <td>Saúde</td>
-        <td>Exames mais precisos</td>
-      </tr>
+    <br><br>
 
-      <tr>
-        <td>Comunicação</td>
-        <td>Contato instantâneo</td>
-      </tr>
+    <input type="email" placeholder="E-mail">
 
-      <tr>
-        <td>Transporte</td>
-        <td>Veículos inteligentes</td>
-      </tr>
+    <br><br>
 
-    </table>
+    <textarea rows="6" placeholder="Digite sua mensagem"></textarea>
 
-  </section>
+    <br><br>
 
-  <footer>
+    <button type="submit">Enviar Mensagem</button>
 
-    <h2>TECNOLOGIA & FUTURO</h2>
+  </form>
 
-    <p>
-      Explorando as inovações que irão transformar o mundo nas próximas décadas.
-    </p>
-
-    <br>
-
-    <p><strong>Escola:</strong> Dom João Nery</p>
-    <p><strong>Projeto:</strong> Página sobre Tecnologia e Futuro</p>
-    <p><strong>Desenvolvido em:</strong> HTML e CSS</p>
-    <p><strong>Ano:</strong> 2026</p>
-
-    <br>
-
-    <div class="social">
-      <a href="#">Instagram</a>
-      <a href="#">YouTube</a>
-      <a href="#">GitHub</a>
-    </div>
-
-    <p class="copy">
-      © 2026 - Todos os direitos reservados.
-    </p>
-
-  </footer>
-
-</body>
-</html>
+</section>
